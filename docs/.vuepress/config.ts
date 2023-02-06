@@ -5,8 +5,7 @@ import { mdEnhancePlugin } from 'vuepress-plugin-md-enhance';
 import { copyCodePlugin } from 'vuepress-plugin-copy-code2';
 import { balancerTheme } from '../../theme/';
 import { navbar, sidebar } from './configs/index.js';
-import { typedocPlugin } from 'vuepress-plugin-typedoc/next';
-
+// import { typedocPlugin } from 'vuepress-plugin-typedoc/next';
 
 const isProd = process.env.NODE_ENV === 'production';
 
@@ -69,11 +68,11 @@ export default defineUserConfig({
   // use plugins
   plugins: [
     copyCodePlugin({}),
-    typedocPlugin({
-      // plugin options
-      entryPoints: ['../balancer-sdk/balancer-js/src/index.ts'],
-      tsconfig: '../balancer-sdk/balancer-js/tsconfig.json',
-    }),
+    // typedocPlugin({
+    //   // plugin options
+    //   entryPoints: ['balancer-sdk/balancer-js/src/index.ts'],
+    //   tsconfig: 'balancer-sdk/balancer-js/tsconfig.json',
+    // }),
     mdEnhancePlugin({
       mathjax: true,
       container: true,
